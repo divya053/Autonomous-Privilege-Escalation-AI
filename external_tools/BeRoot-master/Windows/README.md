@@ -1,9 +1,7 @@
 # BeRoot For Windows
 
 BeRoot(s) is a post exploitation tool to check common Windows misconfigurations to find a way to escalate our privilege. \
-A compiled version is available [here](https://github.com/AlessandroZ/BeRoot/releases). 
 
-It has been added to the [pupy](https://github.com/n1nj4sec/pupy/) project as a post exploitation module (it's executed in memory without touching the disk). 
 
 This tool is only used to detect and not to exploit. If something is found, [templates](https://github.com/AlessandroZ/BeRoot/tree/master/Windows/templates) could be used to exploit it. To use it, just create a __test.bat__ file located next to the service / DLL used. It should execute it once called. Depending on the Redistributable Packages installed on the target host, these binaries may not work.  
 
@@ -214,7 +212,6 @@ All local accounts are tested to detect empty password.
 Local account with passwordreq:no
 ----
 
-Idea comes from 0xRick 's [write up](https://0xrick.github.io/hack-the-box/access/).
 
 Checking for user account options, we could see this kind of output: 
 
@@ -235,19 +232,5 @@ This directive allows us to use `runas` without needed the user account password
 > runas /user:username /savecred cmd.exe
 ```
 
-Check 0xRick blog post to have a better example.
 
 
-Not managed by Beroot
-----
-
-Some misconfigurations that could lead to privilege escalation are not checked by Beroot. These actions need monitoring and should be done manually: 
-* When a privilege account access a non privilege file: http://offsec.provadys.com/intro-to-file-operation-abuse-on-Windows.html
-* Dll Hijacking
-* Outdated Windows (use [Watson](https://github.com/rasta-mouse/Watson) or [wesng](https://github.com/bitsadmin/wesng) and check on [github](https://github.com/SecWiki/windows-kernel-exploits) for exploits).
-* From Local/Network service account to admin. Check itm4n's [write up](https://itm4n.github.io/localservice-privileges/) and his [tool](https://github.com/itm4n/FullPowers) 
-
-Special thanks
-----
-* Good description of each checks: https://toshellandback.com/2015/11/24/ms-priv-esc/
-* Andrea Pierini [work](https://2018.romhack.io/slides/RomHack%202018%20-%20Andrea%20Pierini%20-%20whoami%20priv%20-%20show%20me%20your%20Windows%20privileges%20and%20I%20will%20lead%20you%20to%20SYSTEM.pdf)
