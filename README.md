@@ -12,35 +12,35 @@ Add Your API Key: Open the .env file and add the following line:
 OPENAI_API_KEY=your_api_key_here
 Replace your_api_key_here with the API key you obtained from OpenAI.
 
-#Run with Docker
+# Run with Docker
 Before running the project, ensure you have installed:
 Docker
 Docker Compose
 OpenAI key
 
-#Setup
+# Setup
 Clone the repository and launch the Docker containers:
 docker compose up -d
 Access the application at: https://127.0.0.1:5000
 
-#Run Locally
+# Run Locally
 Ensure the following are installed:
 Python 3 and pip
 OpenAI key
 
-#Setup
+# Setup
 Clone the repository and prepare the environment
 ./generate_certs.sh
 pip install -r requirements.txt
 python app.py
 Access the application at: https://127.0.0.1:5000
 
-#Integrated Tools
+# Integrated Tools
 Integrates several tools for privilege escalation enumeration, including:
 BeRoot: A tool for identifying common privilege escalation vectors in Windows environments.
 LinPEAS: A script that audits Linux environments for potential misconfigurations and vulnerabilities.
 
-#Features
+# Features
 Import and export instructions
 For example, to capture a flag
 
