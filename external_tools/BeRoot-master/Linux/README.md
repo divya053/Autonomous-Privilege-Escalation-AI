@@ -13,7 +13,6 @@ python beroot.py --password super_strong_password
 GTFOBins
 ----
 
-[GTFOBins](https://gtfobins.github.io/#) could be used to gain root privilege on a system. These binaries allow a user to execute arbitrary code on the host, so imagine you could have access to one of them with sudo privilege (suid binary or if it's allowed on the sudoers file), you should be able to execute system command as root. BeRoot contains a list of theses binaries taken from [GTFOBins](https://gtfobins.github.io/#).  
 
 Here is an example of a well-known binary: 
 
@@ -376,8 +375,3 @@ Monitoring
 Monitoring could be useful to detect what's running on the system. Beroot does not that but it's possible to list some processes from other users, cron jobs, etc without needing root privileges. This could be done using [pspy](https://github.com/DominicBreuker/pspy).
 
 
-Interesting write up 
-----
-
-* 0xRick [blog](https://0xrick.github.io/categories/)
-* Raj Chandel's [blog](https://github.com/Ignitetechnologies/Privilege-Escalation)
